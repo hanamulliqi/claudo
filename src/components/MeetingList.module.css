@@ -1,0 +1,189 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid #ede8e0;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.pastItem {
+  opacity: 0.6;
+}
+
+.dateCol {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #7c5cbf;
+  flex-shrink: 0;
+}
+
+.pastDot {
+  background: #ccc;
+}
+
+.date {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
+.details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.place {
+  font-size: 0.875rem;
+  color: #555;
+}
+
+.place a {
+  color: #7c5cbf;
+  text-decoration: none;
+}
+
+.place a:hover {
+  text-decoration: underline;
+}
+
+.notes {
+  font-size: 0.8125rem;
+  color: #999;
+  font-style: italic;
+}
+
+.delete {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0 4px;
+  flex-shrink: 0;
+}
+
+.delete:hover {
+  color: #e05555;
+}
+
+.trigger {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1.5px dashed #c4b8e8;
+  background: transparent;
+  color: #7c5cbf;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.trigger:hover {
+  background: #f0ebfa;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #faf9f7;
+  border: 1.5px solid #e0dbd3;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.input, .textarea {
+  border: 1.5px solid #e0dbd3;
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-size: 0.9375rem;
+  background: #fff;
+  color: #1a1a1a;
+  resize: vertical;
+}
+
+.input:focus, .textarea:focus {
+  outline: none;
+  border-color: #7c5cbf;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.cancel {
+  padding: 7px 14px;
+  border-radius: 7px;
+  border: 1.5px solid #e0dbd3;
+  background: #fff;
+  color: #555;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.submit {
+  padding: 7px 16px;
+  border-radius: 7px;
+  border: none;
+  background: #7c5cbf;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.submit:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.past {
+  margin-top: 4px;
+}
+
+.pastSummary {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #aaa;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.pastSummary:hover {
+  color: #888;
+}
