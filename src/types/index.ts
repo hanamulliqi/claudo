@@ -6,12 +6,20 @@ export interface Book {
   pageCount?: number;
 }
 
+export interface Suggestion {
+  id: string;
+  book: Book;
+  suggestedBy: string;
+  votes: string[]; // member ids who voted
+}
+
 export interface Club {
   id: string;
   name: string;
   description: string;
   isVirtual: boolean;
   currentBook?: Book;
+  suggestions: Suggestion[];
   members: Member[];
 }
 
