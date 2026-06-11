@@ -1,7 +1,8 @@
-import { Club, Member, Book, Suggestion } from '../types'
+import { Club, Member, Book, Suggestion, Meeting } from '../types'
 import AddMemberForm from '../components/AddMemberForm'
 import CurrentBook from '../components/CurrentBook'
 import SuggestionList from '../components/SuggestionList'
+import MeetingList from '../components/MeetingList'
 import styles from './ClubDetail.module.css'
 
 interface Props {
@@ -39,6 +40,14 @@ export default function ClubDetail({ club, onBack, onUpdateClub }: Props) {
     onUpdateClub({ ...club, suggestions: [...(club.suggestions ?? []), suggestion] })
   }
 
+  function handleAddMeeting(meeting: Meeting) {
+    onUpdateClub({ ...club, meetings: [...(club.meetings ?? []), meeting] })
+  }
+
+  function handleDeleteMeeting(id: string) {
+    onUpdateClub({ ...club, meetings: (club.meetings ?? []).filter(m => m.id !== id) })
+  }
+
   function handleVote(suggestionId: string) {
     const suggestions = (club.suggestions ?? []).map(s => {
       if (s.id !== suggestionId) return s
@@ -62,6 +71,21 @@ export default function ClubDetail({ club, onBack, onUpdateClub }: Props) {
         <h1 className={styles.name}>{club.name}</h1>
         {club.description && <p className={styles.description}>{club.description}</p>}
       </div>
+
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>
+          Meetings
+          {(club.meetings?.length ?? 0) > 0 && (
+            <span className={styles.count}>{club.meetings.filter(m => new Date(m.date) >= new Date()).length} upcoming</span>
+          )}
+        </h2>
+        <MeetingList
+          meetings={club.meetings ?? []}
+          isVirtual={club.isVirtual}
+          onAdd={handleAddMeeting}
+          onDelete={handleDeleteMeeting}
+        />
+      </section>
 
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Current book</h2>
