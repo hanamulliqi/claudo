@@ -21,6 +21,8 @@ export function createClub(data: { name: string; description: string; isVirtual:
     name: data.name,
     description: data.description,
     isVirtual: data.isVirtual,
+    currentBook: undefined,
+    suggestions: [],
     members: [],
   }
 }
