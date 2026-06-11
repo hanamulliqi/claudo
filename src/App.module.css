@@ -15,16 +15,17 @@
 .headerInner {
   max-width: 960px;
   margin: 0 auto;
-  padding: 16px 24px;
+  padding: 14px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .logo {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 800;
   color: #1a1a1a;
+  letter-spacing: -0.01em;
 }
 
 .newButton {
@@ -35,6 +36,7 @@
   color: #fff;
   font-size: 0.9375rem;
   font-weight: 600;
+  transition: background 0.15s;
 }
 
 .newButton:hover {
@@ -52,7 +54,7 @@
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0,0,0,0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,32 +74,55 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  min-height: 360px;
+  min-height: 400px;
   text-align: center;
+  padding: 24px;
+}
+
+.emptyIllustration {
+  font-size: 3rem;
+  margin-bottom: 8px;
 }
 
 .emptyTitle {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 800;
   color: #1a1a1a;
 }
 
 .emptySubtitle {
   font-size: 1rem;
-  color: #888;
+  color: #999;
+  max-width: 300px;
+  line-height: 1.5;
 }
 
 .emptyButton {
   margin-top: 8px;
-  padding: 10px 22px;
+  padding: 11px 24px;
   border-radius: 8px;
   border: none;
   background: #7c5cbf;
   color: #fff;
   font-size: 1rem;
   font-weight: 600;
+  transition: background 0.15s;
 }
 
 .emptyButton:hover {
   background: #6a4eaa;
+}
+
+@media (max-width: 600px) {
+  .headerInner {
+    padding: 12px 16px;
+  }
+
+  .main {
+    padding: 24px 16px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
