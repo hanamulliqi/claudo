@@ -67,8 +67,9 @@ export default function App() {
 
         {clubs.length === 0 ? (
           <div className={styles.empty}>
+            <div className={styles.emptyIllustration}>📚</div>
             <p className={styles.emptyTitle}>No clubs yet</p>
-            <p className={styles.emptySubtitle}>Create your first book club to get started.</p>
+            <p className={styles.emptySubtitle}>Start your first book club — virtual or in-person, big or small.</p>
             <button className={styles.emptyButton} onClick={() => setShowForm(true)}>
               + New club
             </button>
