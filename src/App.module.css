@@ -1,0 +1,103 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: #fff;
+  border-bottom: 1px solid #ede8e0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.headerInner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.newButton {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #7c5cbf;
+  color: #fff;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.newButton:hover {
+  background: #6a4eaa;
+}
+
+.main {
+  flex: 1;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  width: 100%;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 360px;
+  text-align: center;
+}
+
+.emptyTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.emptySubtitle {
+  font-size: 1rem;
+  color: #888;
+}
+
+.emptyButton {
+  margin-top: 8px;
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: none;
+  background: #7c5cbf;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.emptyButton:hover {
+  background: #6a4eaa;
+}
